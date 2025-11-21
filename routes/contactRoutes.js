@@ -24,7 +24,7 @@ router.post("/", async (req, res) => {
 // Get a specific Contact 
 router.get("/", async (req, res) => {
   try {
-    const contact = await Contact.findAll();
+    const contact = await Contact.find();
 
     if (!Contact) {
       return res.status(404).json({ message: "Contact not found" });
